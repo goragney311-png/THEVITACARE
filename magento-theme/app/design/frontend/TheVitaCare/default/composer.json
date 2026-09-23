@@ -1,0 +1,13 @@
+{
+  "name": "thevitacare/theme-frontend-default",
+  "description": "THEVITACARE Magento 2 frontend theme (Luma child) – healthcare & skincare store",
+  "type": "magento2-theme",
+  "version": "1.0.0",
+  "license": ["OSL-3.0"],
+  "require": {
+    "php": "~8.1.0||~8.2.0||~8.3.0",
+    "magento/theme-frontend-luma": "*",
+    "magento/framework": "*"
+  },
+  "autoload": { "files": ["registration.php"] }
+}

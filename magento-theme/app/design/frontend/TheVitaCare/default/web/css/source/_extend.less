@@ -1,0 +1,179 @@
+//  THEVITACARE custom styles – layered on top of Luma
+
+& when (@media-common = true) {
+
+    // ---------- Top announcement bar ----------
+    .tvc-topbar {
+        background: @brand-emerald-dark;
+        color: #fff;
+        font-size: 13px;
+        text-align: center;
+        padding: 8px 15px;
+        span + span:before { content: '|'; margin: 0 10px; opacity: .6; }
+    }
+
+    // ---------- Header ----------
+    .page-header {
+        border-bottom: 1px solid @brand-slate-200;
+        .logo img { max-height: 44px; }
+        .block-search input {
+            border-radius: 999px;
+            padding-left: 20px;
+            border-color: #cbd5e1;
+            &:focus { border-color: @brand-emerald; box-shadow: none; }
+        }
+    }
+    .minicart-wrapper .action.showcart .counter.qty {
+        background: @brand-orange;
+        border-radius: 999px;
+        min-width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    // ---------- Product cards (grid) ----------
+    .products-grid .product-item {
+        .product-item-info {
+            border: 1px solid @brand-slate-200;
+            border-radius: 16px;
+            padding: 12px;
+            width: 100%;
+            transition: box-shadow .2s, transform .2s;
+            &:hover { box-shadow: 0 20px 40px -20px rgba(15, 23, 42, .3); transform: translateY(-2px); border-color: @brand-slate-200; margin: 0; }
+        }
+        .product-image-container { border-radius: 12px; overflow: hidden; background: #f8fafc; }
+        .product-image-photo { transition: transform .5s; }
+        &:hover .product-image-photo { transform: scale(1.05); }
+        .product-item-name { font-weight: 600; margin: 10px 0 4px; min-height: 42px; }
+        .price-box .price { font-weight: 800; font-size: 18px; }
+        .old-price .price { font-weight: 400; font-size: 14px; }
+        .action.tocart { width: 100%; border-radius: 999px; }
+    }
+
+    // ---------- Category / shop page ----------
+    .page-title-wrapper { padding: 30px 0 10px; }
+    .catalog-category-view .page-title-wrapper,
+    .catalogsearch-result-index .page-title-wrapper {
+        background: @brand-emerald-light;
+        margin: 0 -15px 30px;
+        padding: 40px 15px;
+    }
+    .sidebar .filter-options-title,
+    .sidebar .block-title { font-weight: 700; }
+    .sidebar .filter-options-item .filter-options-content a:hover { color: @brand-emerald; }
+
+    // ---------- Product page ----------
+    .catalog-product-view {
+        .product.media { border: 1px solid @brand-slate-200; border-radius: 24px; padding: 10px; background: #f8fafc; }
+        .page-title-wrapper.product .page-title { font-size: 34px; font-weight: 800; line-height: 1.15; }
+        .product-info-price .price-box .price { font-size: 36px; font-weight: 800; color: @brand-emerald-dark; }
+        .box-tocart {
+            .qty .input-text { border-radius: 999px; }
+            .action.tocart { border-radius: 999px; padding: 14px 40px; font-size: 16px; }
+        }
+        .product-info-stock-sku { color: @brand-slate-600; font-size: 13px; }
+        .stock.available { color: @brand-emerald; font-weight: 700; }
+        .product-options-wrapper .field .label { font-weight: 700; }
+        .product.data.items > .item.title > .switch { font-weight: 700; }
+    }
+    .tvc-trust {
+        display: flex; flex-wrap: wrap; gap: 8px 18px;
+        margin: 20px 0; padding: 14px 0; border-top: 1px solid @brand-slate-200; border-bottom: 1px solid @brand-slate-200;
+        font-size: 13px; color: @brand-slate-600;
+    }
+    .tvc-rx {
+        background: #fffbeb; border: 1px solid #fcd34d; color: #92400e;
+        border-radius: 12px; padding: 12px 14px; font-size: 13px; margin: 15px 0;
+    }
+    .tvc-why {
+        background: @brand-emerald-light; border-radius: 16px; padding: 20px;
+        h3 { margin-top: 0; font-weight: 800; }
+        ul { list-style: none; padding: 0; margin: 0; li { padding: 4px 0; font-size: 14px; } }
+    }
+
+    // ---------- Home page (CMS) ----------
+    .tvc-hero {
+        background: @brand-emerald-light;
+        border-radius: 0 0 32px 32px;
+        padding: 50px 0;
+        .tvc-hero-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
+        .tvc-hero-text { flex: 1 1 420px; }
+        .tvc-hero-img { flex: 1 1 380px; img { border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0,0,0,.25); width: 100%; } }
+        .tvc-pill { display: inline-block; background: #ffedd5; color: #ea580c; font-weight: 600; font-size: 13px; padding: 5px 14px; border-radius: 999px; }
+        h1 { font-size: 48px; line-height: 1.1; margin: 18px 0; em { font-style: normal; color: @brand-emerald; } }
+        p { font-size: 17px; color: @brand-slate-600; max-width: 520px; }
+        .tvc-stats { display: flex; gap: 30px; margin-top: 28px; strong { display: block; font-size: 24px; } span { color: @brand-slate-600; font-size: 13px; } }
+    }
+    .tvc-btn {
+        display: inline-block; padding: 13px 30px; border-radius: 999px; font-weight: 700; text-decoration: none !important;
+        background: @brand-emerald; color: #fff !important; margin: 6px 10px 6px 0;
+        &:hover { background: @brand-emerald-dark; }
+        &.outline { background: transparent; color: @brand-slate-900 !important; border: 2px solid @brand-slate-900; &:hover { background: @brand-slate-900; color: #fff !important; } }
+    }
+    .tvc-features {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;
+        background: #fff; border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px;
+        box-shadow: 0 20px 40px -20px rgba(15,23,42,.25); margin: -30px auto 0; position: relative; z-index: 2;
+        .tvc-feature { display: flex; gap: 12px; .ico { font-size: 28px; } b { display: block; } small { color: @brand-slate-600; } }
+    }
+    .tvc-section { margin: 70px 0 0; }
+    .tvc-section-head {
+        text-align: center; margin-bottom: 30px;
+        .eyebrow { color: @brand-emerald; text-transform: uppercase; letter-spacing: .15em; font-weight: 600; font-size: 13px; }
+        h2 { font-size: 34px; margin: 8px 0 0; }
+        &.left { text-align: left; display: flex; justify-content: space-between; align-items: flex-end; }
+    }
+    .tvc-cats {
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px;
+        a { border: 1px solid @brand-slate-200; border-radius: 16px; padding: 12px; text-align: center; color: @brand-slate-900; text-decoration: none !important; display: block;
+            img { border-radius: 12px; width: 100%; aspect-ratio: 1; object-fit: cover; }
+            b { display: block; margin-top: 10px; } small { color: @brand-slate-600; }
+            &:hover { box-shadow: 0 10px 30px -15px rgba(0,0,0,.3); b { color: @brand-emerald; } } }
+    }
+    .tvc-about {
+        background: @brand-slate-900; color: #cbd5e1; border-radius: 28px; padding: 50px;
+        display: flex; flex-wrap: wrap; gap: 40px; align-items: center;
+        > div { flex: 1 1 380px; }
+        h2 { color: #fff; margin: 6px 0 14px; } .eyebrow { color: #34d399; }
+        .tvc-about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; text-align: center;
+            div { background: rgba(255,255,255,.06); border-radius: 16px; padding: 22px; strong { display: block; color: #fff; font-size: 28px; } } }
+    }
+    .tvc-trending { background: #f8fafc; padding: 60px 0; margin-top: 70px; }
+    .tvc-faq {
+        max-width: 760px; margin: 0 auto;
+        details { border: 1px solid @brand-slate-200; border-radius: 16px; padding: 16px 20px; margin-bottom: 12px;
+            summary { font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; &:after { content: '+'; color: @brand-emerald; font-size: 22px; } }
+            &[open] { background: fade(@brand-emerald-light, 50%); summary:after { content: '–'; } }
+            p { margin: 10px 0 0; color: @brand-slate-600; font-size: 14px; } }
+    }
+    .tvc-newsletter { text-align: center; margin: 70px auto 20px; max-width: 700px; }
+
+    // ---------- Footer ----------
+    .page-footer {
+        margin-top: 80px;
+        .footer.content { border-top: 0; padding-top: 50px;
+            .tvc-footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; color: #cbd5e1; font-size: 14px;
+                h4 { color: #fff; font-weight: 700; margin: 0 0 14px; }
+                ul { list-style: none; padding: 0; margin: 0; li { margin-bottom: 8px; } }
+                a { color: #cbd5e1; &:hover { color: #34d399; } }
+                .tvc-logo { color: #fff; font-weight: 800; font-size: 22px; em { font-style: normal; color: #34d399; } } }
+            .footer.links { display: none; } }
+        .copyright { background: #020617; color: #64748b; font-size: 12px; text-align: center; padding: 18px 15px; display: block; }
+    }
+    .page-footer .footer.content .block.newsletter { display: none; }
+}
+
+//  Desktop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .tvc-hero { padding: 70px 0; }
+    .catalog-category-view .page-title-wrapper,
+    .catalogsearch-result-index .page-title-wrapper { margin: 0 0 30px; border-radius: 24px; padding: 40px; }
+    .tvc-about { padding: 60px; }
+}
+
+//  Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .tvc-hero h1 { font-size: 34px; }
+    .tvc-about { padding: 30px; }
+    .tvc-section-head h2 { font-size: 26px; }
+}

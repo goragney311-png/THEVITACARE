@@ -1,0 +1,8 @@
+{
+  "name": "thevitacare/module-setup",
+  "description": "Creates product attributes, categories and CMS pages for the THEVITACARE theme",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": ["OSL-3.0"],
+  "autoload": { "files": ["registration.php"], "psr-4": { "TheVitaCare\\Setup\\": "" } }
+}

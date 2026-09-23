@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" src_type="url" rel="stylesheet"/>
+        <meta name="theme-color" content="#059669"/>
+    </head>
+    <body>
+        <!-- Announcement bar above header -->
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="tvc.topbar" template="Magento_Theme::html/topbar.phtml" before="-"/>
+        </referenceContainer>
+
+        <!-- Logo -->
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.svg</argument>
+                <argument name="logo_img_width" xsi:type="number">240</argument>
+                <argument name="logo_img_height" xsi:type="number">44</argument>
+                <argument name="logo_alt" xsi:type="string">THEVITACARE</argument>
+            </arguments>
+        </referenceBlock>
+
+        <!-- Footer: replace Luma link columns with our 4-column footer -->
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="tvc.footer" template="Magento_Theme::html/footer.phtml" before="-"/>
+        </referenceContainer>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="copyright">
+            <arguments>
+                <argument name="copyright" xsi:type="string" translate="true">© THEVITACARE. All rights reserved. TheVitaCare is an India-registered online retailer operated by THEVITACARE (Reg. No. UDYAM-GJ-22-0600303). We are an independent retailer and not the manufacturer of listed products. Information on this site is not medical advice.</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
