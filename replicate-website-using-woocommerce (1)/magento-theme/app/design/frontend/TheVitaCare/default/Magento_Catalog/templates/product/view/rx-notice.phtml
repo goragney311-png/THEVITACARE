@@ -1,0 +1,10 @@
+<?php
+/** @var \Magento\Catalog\Block\Product\View $block */
+$product = $block->getProduct();
+$dosage = (string) $product->getData('dosage');
+if (stripos($dosage, 'prescription medicine') !== false): ?>
+<div class="tvc-rx">
+    <strong><?= $block->escapeHtml(__('Rx – Prescription medicine.')) ?></strong>
+    <?= $block->escapeHtml(__('Please consult a licensed healthcare professional before use. You may be asked to provide a valid prescription at checkout or before dispatch.')) ?>
+</div>
+<?php endif; ?>

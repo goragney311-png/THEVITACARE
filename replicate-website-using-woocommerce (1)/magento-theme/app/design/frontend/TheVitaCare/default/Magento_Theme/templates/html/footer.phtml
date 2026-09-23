@@ -1,0 +1,40 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ $u = $block->getBaseUrl(); ?>
+<div class="tvc-footer-grid">
+    <div>
+        <div class="tvc-logo">THE<em>VITA</em>CARE</div>
+        <p><?= $block->escapeHtml(__('THEVITACARE is an online destination for healthcare and skincare products, offering a curated selection of brands to customers across the United States. We source products through third-party distributors, suppliers and fulfillment partners.')) ?></p>
+    </div>
+    <div>
+        <h4><?= $block->escapeHtml(__('Shop')) ?></h4>
+        <ul>
+            <li><a href="<?= $u ?>supplements.html">Supplements</a></li>
+            <li><a href="<?= $u ?>skin-care.html">Skin Care</a></li>
+            <li><a href="<?= $u ?>serum.html">Serum</a></li>
+            <li><a href="<?= $u ?>sunscreens.html">Sunscreens</a></li>
+            <li><a href="<?= $u ?>eye-cream.html">Eye Cream</a></li>
+            <li><a href="<?= $u ?>face-wash.html">Face Wash</a></li>
+            <li><a href="<?= $u ?>hair-care.html">Hair Care</a></li>
+            <li><a href="<?= $u ?>lipsticks.html">Lipsticks</a></li>
+        </ul>
+    </div>
+    <div>
+        <h4><?= $block->escapeHtml(__('Customer Care')) ?></h4>
+        <ul>
+            <li><a href="<?= $u ?>sales/guest/form/"><?= $block->escapeHtml(__('Track Your Order')) ?></a></li>
+            <li><a href="<?= $u ?>about"><?= $block->escapeHtml(__('About Us')) ?></a></li>
+            <li><a href="<?= $u ?>contact"><?= $block->escapeHtml(__('Contact Us')) ?></a></li>
+            <li><a href="<?= $u ?>shipping-returns"><?= $block->escapeHtml(__('Shipping & Returns')) ?></a></li>
+            <li><a href="<?= $u ?>privacy-policy-cookie-restriction-mode"><?= $block->escapeHtml(__('Privacy Policy')) ?></a></li>
+        </ul>
+    </div>
+    <div>
+        <h4><?= $block->escapeHtml(__('Get in Touch')) ?></h4>
+        <ul>
+            <li>📍 577 Gadhpur Township, Pasodara Kathodara, Surat, Gujarat 394326, India</li>
+            <li>📞 +91 7069698484</li>
+            <li>✉️ order@thevitacare.com</li>
+            <li>🕒 Mon–Sat: 9:00 AM – 6:00 PM IST</li>
+            <li><small>Registration No. UDYAM-GJ-22-0600303</small></li>
+        </ul>
+    </div>
+</div>

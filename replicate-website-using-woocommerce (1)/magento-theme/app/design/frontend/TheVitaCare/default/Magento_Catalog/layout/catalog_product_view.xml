@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <!-- Rx warning shown when the product's "dosage" text mentions a prescription -->
+            <block class="Magento\Catalog\Block\Product\View" name="tvc.rx.notice" template="Magento_Catalog::product/view/rx-notice.phtml" after="product.info.price"/>
+            <!-- Trust badges below the Add to Cart box -->
+            <block class="Magento\Framework\View\Element\Template" name="tvc.trust" template="Magento_Catalog::product/view/trust.phtml" after="product.info.addtocart"/>
+        </referenceContainer>
+        <referenceContainer name="sidebar.additional">
+            <block class="Magento\Framework\View\Element\Template" name="tvc.why" template="Magento_Catalog::product/view/why.phtml" before="-"/>
+        </referenceContainer>
+        <!-- Rename tabs to match the Next.js build -->
+        <referenceBlock name="product.info.description">
+            <arguments><argument name="title" translate="true" xsi:type="string">Description</argument></arguments>
+        </referenceBlock>
+        <referenceBlock name="product.attributes">
+            <arguments><argument name="title" translate="true" xsi:type="string">Additional information</argument></arguments>
+        </referenceBlock>
+    </body>
+</page>
